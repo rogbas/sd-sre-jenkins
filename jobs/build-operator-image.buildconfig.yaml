@@ -1,0 +1,12 @@
+kind: "BuildConfig"
+apiVersion: "v1"
+metadata:
+  name: "build-operator-image"
+spec:
+  source:
+    git:
+      uri: "https://github.com/rogbas/sd-sre-jenkins"
+      ref: "SREP-1187-initial-version"
+  strategy:
+    jenkinsPipelineStrategy:
+      jenkinsfilePath: pipelines/build-operator-image.groovy
